@@ -1,0 +1,43 @@
+features:
+  user_shift_start_end_features: ['start_time', 'end_time']
+  user_sleep_start_end_features: ['major_sleep_start', 'major_sleep_end']
+  user_sleep_shift_features_for_transformation: ['user_id', 'shift_date', 'off_day', 'minutes_of_duty', 'streak', 'minutes_resting',
+                                                'minutes_sleeping', 'minutes_sleep_latency', 'wake_episodes', 'mean_wake_episodes',
+                                                'shift_start_time_minutes_sin', 'shift_start_time_minutes_cos', 'shift_end_time_minutes_sin',
+                                                'shift_end_time_minutes_cos', 'sleep_start_time_minutes_sin', 'sleep_start_time_minutes_cos',
+                                                'sleep_end_time_minutes_sin', 'sleep_end_time_minutes_cos']
+  model_fixed_features: ['shift_start_time_minutes_sin', 'shift_start_time_minutes_cos', 'shift_end_time_minutes_sin', 'shift_end_time_minutes_cos', 'minutes_of_duty']
+  user_profile_features: ['shift_date', 'minutes_of_duty_rolling_avg', 'streak_rolling_avg', 'minutes_resting_rolling_avg', 'minutes_sleeping_rolling_avg', 'minutes_sleep_latency_rolling_avg', 'wake_episodes_rolling_avg', 'mean_wake_episodes_rolling_avg', 'peak_safte_rolling_avg', 'shift_start_time_minutes_rolling_avg', 'shift_end_time_minutes_rolling_avg', 'sleep_start_time_minutes_rolling_avg', 'sleep_end_time_minutes_rolling_avg', 'difference_shift_end_to_sleep_start_minutes_rolling_avg', 'difference_current_day_shift_start_time_to_previous_day_shift_end_time_rolling_avg', 'difference_current_day_sleep_start_time_to_previous_day_sleep_end_time_rolling_avg', 'daily_average_readiscore_rolling_avg', 'readi_score_shift_start_time_rolling_avg', 'readi_score_shift_end_time_rolling_avg', 'readi_score_sleep_start_time_rolling_avg', 'readi_score_sleep_end_time_rolling_avg', 'difference_readi_score_shift_start_time_and_readi_score_shift_end_time_rolling_avg', 'difference_readi_score_sleep_end_time_and_readi_score_sleep_start_time_rolling_avg', 'difference_previous_day_readi_score_shift_end_time_to_current_day_readi_score_sleep_start_time_rolling_avg', 'difference_previous_day_readi_score_shift_start_time_to_current_day_readi_score_shift_start_time_rolling_avg', 'difference_previous_day_readi_score_shift_end_time_to_current_day_readi_score_shift_end_time_rolling_avg', 'difference_previous_day_readi_score_sleep_start_time_to_current_day_readi_score_sleep_start_time_rolling_avg', 'difference_previous_day_readi_score_sleep_end_time_to_current_day_readi_score_sleep_start_time_rolling_avg']
+
+
+user_list:
+  user_list_file_name: 'input_user_list.txt'
+
+delta_days:
+  previous_delta_days: 1
+  next_delta_days: 0
+
+variables:
+  shift_instance: ['day', 'night']
+  check_model_accuracy: True
+
+hyperparameters:
+  day_shift_sleep_minutes_model: 
+    learning_rate: 0.0001
+    epoch: 300
+    batch_size: 32
+
+  night_shift_sleep_minutes_model: 
+    learning_rate: 0.0001
+    epoch: 300
+    batch_size: 32
+
+  day_shift_sleep_start_model: 
+    learning_rate: 0.0001
+    epoch: 300
+    batch_size: 32
+
+  night_shift_sleep_start_model: 
+    learning_rate: 0.0001
+    epoch: 300
+    batch_size: 32

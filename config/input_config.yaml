@@ -1,0 +1,4 @@
+prediction_range:
+  start_date: '2022-09-01' #YYYY-MM-DD
+  total_days_to_predict: 10
+

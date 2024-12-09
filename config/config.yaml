@@ -1,0 +1,45 @@
+dir_path:
+  path_to_datasets: 'data/'
+  
+  path_to_config_files: 'config/'
+
+  path_to_load_datasets: 'raw/'
+  path_to_save_datasets: 'generated/'
+
+  path_to_user_features_datasets: 'user-features/'
+  path_to_sleep_profile_datasets: 'sleep-profiles/'
+  path_to_sleep_periods_datasets: 'sleep-periods/'
+  path_to_sleep_daily_datasets: 'sleep-daily/'
+  path_to_shift_instances_datasets: 'shift-instances/'
+  path_to_readi_score_datasets: 'readi-score/'
+
+datasets:
+  user_features_2020: '2020_user_features.csv'
+  user_features_2021: '2021_user_features.csv'
+  user_features_2022: '2022_user_features.csv'
+  user_features_2023: '2023_user_features.csv'
+
+  sleep_profiles_2020: '2020_user_sleep_profiles.csv'
+  sleep_profiles_2021: '2021_user_sleep_profiles.csv'
+  sleep_profiles_2022: '2022_user_sleep_profiles.csv'
+  sleep_profiles_2023: '2023_user_sleep_profiles.csv'
+
+  sleep_periods_2020: '2020_sleep_periods.csv'
+  sleep_periods_2021: '2021_sleep_periods.csv'
+  sleep_periods_2022: '2022_sleep_periods.csv'
+  sleep_periods_2023: '2023_sleep_periods.csv'
+
+  sleep_daily_2020: '2020_sleep_daily_data.csv'
+  sleep_daily_2021: '2021_sleep_daily_data.csv'
+  sleep_daily_2022: '2022_sleep_daily_data.csv'
+  sleep_daily_2023: '2023_sleep_daily_data.csv'
+
+  shift_instances_2020: '2020_user_shift_instances.csv'
+  shift_instances_2021: '2021_user_shift_instances.csv'
+  shift_instances_2022: '2022_user_shift_instances.csv'
+  shift_instances_2023: '2023_user_shift_instances.csv'
+
+  readi_score_2020: '2020_daily_average_readiscores.csv'
+  readi_score_2021: '2021_daily_average_readiscores.csv'
+  readi_score_2022: '2022_daily_average_readiscores.csv'
+  readi_score_2023: '2023_daily_average_readiscores.csv'
